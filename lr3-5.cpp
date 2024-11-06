@@ -1,28 +1,34 @@
-﻿#include <iostream> 
-#include <math.h>
+#include<iostream>
+#include<windows.h>
+#include<cmath>
 using namespace std;
-int main() {
- setlocale(LC_ALL, "RU");
- int a, b, c;
- bool n = false;
- cout << "Введите числа";
- cin >> a >> b >> c;
- if (a % 2 == 1 || b % 2 == 0 || c % 2 == 0) {
-	 n = true;
- }
- else {
-	 cout << "No";
- }
- if (n) {
-	 if (a % 2 == 1 || b % 2 == 1 || c % 2 == 1) {
-		 cout << "Yes";
-	 }
-	 else {
-		 cout << "Yes";
-	 }
- else { cout << "No"; }
- }
- return 0;
 
 
+int main()
+{
+
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    int A, B, C;
+    cout << "Введите A:";
+    cin >> A;
+    cout << "Введите B:";
+    cin >> B;
+    cout << "Введите C:";
+    cin >> C;
+    if (abs(A) < 1000 && abs(B) < 1000 && abs(C) < 1000) {
+        if (A % 2 == 0  B % 2 == 0  C % 2 == 0) {
+            cout << "YES!";
+
+        }
+        else {
+            cout << "NO!";
+        }
+
+    }
+    else {
+        cout << "Какое-то значение больше 1000 по модулю!";
+    }
+
+}
 
